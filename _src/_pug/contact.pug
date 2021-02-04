@@ -1,0 +1,50 @@
+include partials/head.pug
+include partials/nav.pug
+#Contact
+    .hero.bg-primary
+        .container-fluid
+            .row
+                .container
+                    .row.equal
+                        .col-8.quote.pt-5.pb-5
+                            h1 Contact Us
+                            p.lead
+                                | if you’re looking to improve your building management delivery with a new partner, we can provide a timely proposal so you’re ready to make an informed choice when your contract is reaching its end.
+                            p.lead
+                                | Our General Manager is happy to talk about the comprehensive service delivery model we provide and so you’re ready when you’re looking for your next building management company.
+                        .col-4
+                            .gm-image.h-100
+                                .caption.text-center.w-100.pt-5.pb-0
+                                    p
+                                        | Krishna Ramadugu
+                                        br
+                                        | General Manager
+                                        br
+                                        | gm@assetbm.com.au
+    .hero.bg-light.formarea
+        .container-fluid
+            .container
+                .row.equal
+                    .col-6
+                        p.lead.pt-5.pb-5.pr-5 We have a 48 hour turnaround on all requests, so do reach out.
+                        hr
+                        | gm@assetbm.com.au
+                        p
+                    .col-6.pl-5
+                        section.formarea
+                            form
+                                .form-group.row
+                                    label.col-sm-2.col-form-label.pb-3(for='inputEmail3') Name
+                                    .col-sm-10
+                                        input#inputEmail3.form-control(type='email' placeholder='Email')
+                                    label.col-sm-2.col-form-label.pb-3(for='inputEmail3') Email
+                                    .col-sm-10
+                                        input#inputEmail4.form-control(type='name' placeholder='Email')
+                                    label.col-sm-2.col-form-label.pb-3(for='inputEmail3') Phone
+                                    .col-sm-10
+                                        input#inputEmail5.form-control(type='phone' placeholder='Email')
+                                .form-group.row
+                                    .col-sm-10
+                                        button.btn.btn-primary(type='submit') Submit
+
+include partials/footer.pug    

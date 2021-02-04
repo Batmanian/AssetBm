@@ -1,0 +1,276 @@
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+// Start with assigning color names to specific hex values.
+//
+// Color system
+//
+@import './colors.scss';
+
+// Reassign color vars to semantic color scheme
+$theme-colors: (primary: $indigo,
+  secondary: $orange,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800,
+) !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-gradients: false !default;
+$enable-transitions: false !default;
+$enable-hover-media-query: false !default;
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (sm: 100%,
+  md: 100%,
+  lg: 710px,
+  xl: 980px,
+) !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white !default;
+$body-color: $gray-700 !default;
+$inverse-bg: $gray-900 !default;
+$inverse-color: $gray-600 !default;
+
+// Links
+//
+// Style anchor elements.
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
+
+// Fonts
+//
+@import './fonts.scss';
+@import './bootstrap/bootstrap.scss';
+
+/* globals */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.lead
+{
+font-size: 1.5rem;  
+}
+
+img {
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+
+img:hover {
+  animation: pulse 0.5s;
+}
+
+.bg-primary {
+  color: #fff;
+  border-bottom: 0.2rem solid $orange;
+}
+
+hr {
+  display: block;
+  height: 0.2rem;
+  border: 0;
+  border-top: 0.2rem solid $orange;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.logo,
+.logonav {
+
+  background-size: cover;
+  background-image: url($logo);
+}
+
+.logo {
+  width: 217px;
+  height: 48px;
+}
+
+.logonav {
+  width: 129px;
+  height: 28px;
+  width: 11.51rem;
+  height: 2.50rem;
+}
+.orange-border-top{
+  border-top: 0.2rem solid $orange;
+}
+.orange-border-bottom{
+  border-bottom: 0.2rem solid $orange;
+}
+
+/* Navbar */
+.sticky
+    {
+        position: fixed;
+        background: #fff;
+        z-index: 1000;
+        }
+.navbar {
+  border-bottom: 0.2rem solid $orange;
+  padding: 1rem;
+}
+.navbar-nav
+{
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+  //z-index: -100;
+}
+.hover
+{
+  width: 100%;
+  padding: 20px;
+  margin-left: 0%;
+  margin-top: -250px;
+  z-index: 100;
+  //background: red;
+  color: #fff;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.77);
+.lead{
+  font-size: 3rem;
+}
+}
+
+/*home */
+.hero-1{
+  background-image: url("https://assetbm.com.au/img/couple-on-balcony.jpg");
+  background-size: contain;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  
+}
+.hero-2{
+  background-image: url("https://assetbm.com.au/img/hawthorn-park.jpg");
+  background-size: contain;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+  
+}
+
+#Home {
+
+.bg-video
+{
+
+}
+
+}
+/*modals*/
+.modal-body {
+  padding: 0rem;
+}
+
+
+/* Contact page */
+#Contact {
+  .hero {
+
+    .quote {}
+
+    .gm-image {
+      background-image: url("https://assetbm.com.au/img/krishna.jpg");
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .caption {
+        //background: rgba(0, 0, 0, 0.5);
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        color: #fff;
+        position: relative;
+        bottom: 0;
+        top: 100%;
+        transform: translateY(-100%);
+        font-size: 1rem;
+        p
+        {
+          margin-bottom: 0px;
+        }
+      }
+
+    }
+
+  }
+
+  .formarea {}
+}
+
+.footer hr {
+  max-width: 100%;
+  border-color: $orange;
+}
+
+/* services */
+#services {
+  .bg-concierge {
+    background-image: url("https://www.marketplace.org/wp-content/uploads/2019/01/GettyImages-993234810.jpg");
+    background-size: contain;
+    background-position: center;
+    background-size: cover;
+    min-height: 400px;
+
+  }
+}
+
+/* about */
+#about {
+
+}
+.hero-3 {
+ 
+  background-image: url("https://assetbm.com.au/img/woman-on-balcony.jpg");
+  background-size: contain;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+
+}
+.hero-4 {
+  background-image: url("https://ectobox.com/wp-content/uploads/2020/07/our-process.jpg");
+  background-size: contain;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+
+}
