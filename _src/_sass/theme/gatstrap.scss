@@ -77,9 +77,9 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.lead
-{
-font-size: 1.5rem;  
+
+.lead {
+  font-size: 1.5rem;
 }
 
 img {
@@ -123,38 +123,40 @@ hr {
   width: 11.51rem;
   height: 2.50rem;
 }
-.orange-border-top{
+
+.orange-border-top {
   border-top: 0.2rem solid $orange;
 }
-.orange-border-bottom{
+
+.orange-border-bottom {
   border-bottom: 0.2rem solid $orange;
 }
 
 /* Navbar */
-.sticky
-    {
-        position: fixed;
-        background: #fff;
-        z-index: 1000;
-        }
+.sticky {
+  position: fixed;
+  background: #fff;
+  z-index: 1000;
+}
+
 .navbar {
   border-bottom: 0.2rem solid $orange;
   padding: 1rem;
 }
-.navbar-nav
-{
+
+.navbar-nav {
   font-weight: bold;
   font-size: 1.25rem;
 }
 
 video {
   /* override other styles to make responsive */
-  width: 100%    !important;
-  height: auto   !important;
+  width: 100% !important;
+  height: auto !important;
   //z-index: -100;
 }
-.hover
-{
+
+.hover {
   width: 100%;
   padding: 20px;
   margin-left: 0%;
@@ -162,43 +164,102 @@ video {
   z-index: 100;
   //background: red;
   color: #fff;
-  text-shadow: 0px 0px 5px rgba(0,0,0,0.77);
-.lead{
-  font-size: 3rem;
-}
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.77);
+
+  .lead {
+    font-size: 3rem;
+  }
 }
 
 /*home */
-.hero-1{
+.hero-1 {
   background-image: url("https://assetbm.com.au/img/couple-on-balcony.jpg");
   background-size: contain;
   background-position: center;
   background-size: cover;
   min-height: 400px;
-  
+
 }
-.hero-2{
+
+.hero-2 {
   background-image: url("https://assetbm.com.au/img/hawthorn-park.jpg");
   background-size: contain;
   background-position: center;
   background-size: cover;
   min-height: 400px;
+
+}
+
+section{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 400px;
+  width: 1200px;
+  background: #f00;
+  box-shadow:0px 25px 30px rgba(0,0,0,.5);
+  display: flex;
+}
+.content{
+  width: calc(50% - 50px);
+  height: 100%;
+  background: #000;
+  box-sizing: border-box;
+  padding: 30px 50px;
+  color: #fff;
+  font-family: sans-serif;
+  line-height: 25px;
+  
+}
+.image-box{
+     width: calc(50% + 50px);
+  height: 100%;
+  background: #f00;
+  box-sizing: border-box;
+  border-left: 100px solid #000;
+  border-bottom: 400px solid transparent;
+  background: url(http://www.divscode.com/bootimg/pexel.jpeg);
+  background-position: -350px -59px;
+  background-repeat: no-repeat;
   
 }
 
 #Home {
 
-.bg-video
-{
+  .bg-video {}
 
 }
 
+/* Cards / Portfolio */
+.card-deck {
+  display: flex;
 }
+
+.card {
+  filter: saturate(70%);
+  /* No effect */
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  filter: saturate(100%);
+  /* No effect */
+  -webkit-box-shadow: 0px 0px 19px -5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 19px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 19px -5px rgba(0, 0, 0, 0.25);
+
+}
+
+#portfolio {
+  background: #eeeeee;
+}
+
 /*modals*/
 .modal-body {
   padding: 0rem;
 }
-
 
 /* Contact page */
 #Contact {
@@ -215,16 +276,16 @@ video {
 
       .caption {
         //background: rgba(0, 0, 0, 0.5);
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
         color: #fff;
         position: relative;
         bottom: 0;
         top: 100%;
         transform: translateY(-100%);
         font-size: 1rem;
-        p
-        {
+
+        p {
           margin-bottom: 0px;
         }
       }
@@ -254,11 +315,10 @@ video {
 }
 
 /* about */
-#about {
+#about {}
 
-}
 .hero-3 {
- 
+
   background-image: url("https://assetbm.com.au/img/woman-on-balcony.jpg");
   background-size: contain;
   background-position: center;
@@ -266,6 +326,7 @@ video {
   min-height: 400px;
 
 }
+
 .hero-4 {
   background-image: url("https://ectobox.com/wp-content/uploads/2020/07/our-process.jpg");
   background-size: contain;
