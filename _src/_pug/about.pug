@@ -1,11 +1,12 @@
+- var pagetitle = "About us";
 include partials/head.pug
 include partials/nav.pug
-#about
+#about.pt-5
     .container-fluid.bg-primary.bg-services
         .container
-            .row
+            .row.pt-5
                 .col.pt-5.pb-5
-                    p.h1 It’s what we do, and how we do it
+                    h2.h1.text-center It’s what we do, and how we do it
                     p.lead
                         | At AssetBM our team’s experience level is unrivalled including building management, operations management, risk mitigation, compliance and defect management. 
                         br
@@ -14,27 +15,32 @@ include partials/nav.pug
     .container-fluid.bg-light.bg-services
         .containers
             .row
-                .col-6.pt-5.pb-5.hero-3.align-self-stretch
-                .col-6.pt-5.p-5.pr-2
+                .col-12.col-md-6.pt-5.pl-5.pr-5
+                    img(src="https://assetbm.com.au/img/woman-on-balcony.jpg", alt="")
+                .col-12.col-md-6.pt-5.p-5.pr-2
                     .row
                         h3.h2 Growing with you 
-                        p.lead
+                        p.to-fade-in
                             | AssetBM is a dynamic residential facilities management company. With a growing portfolio of satisfied communities under its management, it is quickly becoming the leader in Melbourne’s large residential governance.
     .container-fluid.bg-light.bg-services
         .containers
             .row.border-bottom
-                .col-6.pt-5.p-5.pr-2
+                .col-12.order-2.order-md-2.col-md-6.pt-5.pl-5.pr-5
                     .row
                         h3.h2 Ongoing improvement, inside and out  
-                        p.lead
+                        p.to-fade-in
                             | We support our team to continue to develop personally and professionally, providing them with ongoing educational opportunities, in-house training, participation in online training sessions.
-                .col-6.pt-5.pb-5.hero-4.align-self-stretch
-    .container-fluid.bg-primary.orange-border-top
-        .container
-            .row.no-gutters
-                .col.pt-5.pb-5.text-center
-                    p.h2.pb-3 Want to know more? Get in touch 
-                    p.text-center
-                        a.btn.btn-outline-light.btn-lg(href='contact.html' title='Contact page') Contact
+                .col-12.order-1.order-md-2.col-md-6.pt-5.pb-5
+                    video#vid(width='100%' poster='https://assetbm.com.au/img/hero.png' playsinline='' autoplay='' muted='')
+                        source(src='./assets/img/video/maintenance.webm' type='video/webm')
+                        source(src='./assets/img/video/maintenance.mp4' type='video/mp4')
+    .container-fluid.bg-primary.border-0
+        .container-fliud.orange-border-top
+            .container
+                .row.no-gutters
+                    .col.pt-5.pb-5.text-center
+                        p.h2.pb-3 Want to know more? Get in touch 
+                        p.text-center
+                            a.btn.btn-outline-light.btn-lg(href='contact.html' title='Contact page') Contact
 
 include partials/footer.pug    

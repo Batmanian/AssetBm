@@ -1,32 +1,38 @@
 
-.container-fluid.sticky.p-0
-    //nav.navbar.navbar-expand.navbar-light.flex-column.flex-md-row
+.container-fluid.p-0
+    
+    // Navigation
+    //nav.navbar.navbar-expand-lg.navbar-light.fixed-top
         .container
-            .text-center(href='/')
-                .logonav(title='{title}')
-            .navbar-nav.flex-row.ml-md-auto.d-none.d-md-flex
-                .navbar-nav-scroll.pl-5
-                    ul.pl-5.navbar-nav.bd-navbar-nav.flex-row
-                        li.nav-item.active
-                            a.nav-link(href='index.html')
-                                | Home
-                        li.nav-item
-                            a.nav-link(href='index.html#portfolio')
-                                | Portfolio
-                        li.nav-item
-                            a.nav-link(href='services.html')
-                                | Services
-                        li.nav-item
-                            a.nav-link(href='about.html')
-                                | About
-                        li.nav-item
-                            a.nav-link(href='contact.html')
-                                | Contact
-    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href='#') Start Bootstrap
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+                span.icon-bar.top-bar
+                span.icon-bar.middle-bar
+                span.icon-bar.bottom-bar
+                span.sr-only Toggle navigation
+            #navbarResponsive.collapse.navbar-collapse
+                ul.navbar-nav.ml-auto
+                li.nav-item.active
+                    a.nav-link(href='#')
+                    | Home
+                    span.sr-only (current)
+                li.nav-item
+                    a.nav-link(href='#') About
+                li.nav-item
+                    a.nav-link(href='#') Services
+                li.nav-item
+                    a.nav-link(href='#') Contact
+         
+    
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
         .container
             a.navbar-brand.logonav(href='#') 
-            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-                span.navbar-toggler-icon
+            button.navbar-toggler.collapsed(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                span.icon-bar.top-bar
+                span.icon-bar.middle-bar
+                span.icon-bar.bottom-bar
+                span.sr-only Toggle navigation
+                //span.navbar-toggler-icon
             #navbarNav.collapse.navbar-collapse
                 ul.navbar-nav.ml-auto
                     li.nav-item.text-center.active
@@ -35,6 +41,8 @@
                             span.sr-only (current)
                     li.nav-item.text-center
                         a.nav-link(href='index.html#portfolio') Portfolio
+                    li.nav-item.text-center
+                        a.nav-link(href='services.html') Services
                     li.nav-item.text-center
                         a.nav-link(href='about.html') About
                     li.nav-item.text-center

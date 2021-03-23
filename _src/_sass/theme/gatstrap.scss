@@ -74,12 +74,27 @@ body {
 
 p {
   font-size: 20px;
+  @include font-size(1.2rem);
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
 .lead {
-  font-size: 1.5rem;
+  //font-size: 2rem;
+  @include font-size(1.8rem);
+}
+
+h1, .h1 {
+
+  //font-size: 2rem;
+  @include font-size(2.7rem);
+
+}
+h2, .h2 {
+
+  //font-size: 2rem;
+  @include font-size(2rem);
+
 }
 
 img {
@@ -120,8 +135,26 @@ hr {
 .logonav {
   width: 129px;
   height: 28px;
-  width: 11.51rem;
-  height: 2.50rem;
+  width: 9rem;
+  height: 2rem;
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { width: 11.51rem;
+  height: 2.50rem; }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
+
+}
+.navspacer
+{
+  height: 4rem;
 }
 
 .orange-border-top {
@@ -132,12 +165,26 @@ hr {
   border-bottom: 0.2rem solid $orange;
 }
 
-/* Navbar */
-.sticky {
-  position: fixed;
-  background: #fff;
-  z-index: 1000;
+/* Animations */
+.to-fade-in {
+  opacity: 0;
+
+  &.fade-in {
+    animation: fade-in 2s forwards;
+  }
 }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Navbar */
 
 .navbar {
   border-bottom: 0.2rem solid $orange;
@@ -149,11 +196,100 @@ hr {
   font-size: 1.25rem;
 }
 
+/* navbar toggle styart*/
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  background: transparent !important;
+}
+
+.navbar-toggler .icon-bar {
+  background-color: #000;
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: ease all .2s;
+}
+
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.navbar-toggler .icon-bar+.icon-bar {
+  margin-top: 4px;
+}
+
+.icon-bar:nth-child(2) {
+  width: 16px;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:hover>.icon-bar:nth-child(2) {
+  width: 22px;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:active>.icon-bar:nth-child(2) {
+  width: 22px;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 4px);
+  transition: ease all .2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+  transition: ease all .2s;
+}
+
+.sec-accent {
+  background-color: #fafcf5;
+}
+
+.blue {
+  background-color: #9999cc;
+}
+
+/*navbar toggle end */
 video {
   /* override other styles to make responsive */
   width: 100% !important;
   height: auto !important;
-  //z-index: -100;
+  z-index: -100;
+}
+//* video helpers*/@at-root
+
+.vert-center-text {
+  position: absolute; 
+  top: 20%; 
+  @media (min-width: 576px) {top: 20%;  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {top: 40%;  left: 10%;width: 80%; }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
+  
+  color: #fff
+}
+
+.vert-center-container {
+ position:relative;
 }
 
 .hover {
@@ -167,7 +303,10 @@ video {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.77);
 
   .lead {
-    font-size: 3rem;
+    //font-size: 2rem;
+  @include font-size(3rem);
+    position: relative;
+    bottom: 0;
   }
 }
 
@@ -190,18 +329,19 @@ video {
 
 }
 
-section{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  height: 400px;
-  width: 1200px;
-  background: #f00;
-  box-shadow:0px 25px 30px rgba(0,0,0,.5);
-  display: flex;
-}
-.content{
+/*section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width: 1200px;
+    background: #f00;
+    box-shadow:0px 25px 30px rgba(0,0,0,.5);
+    display: flex;
+    
+}*/
+.content {
   width: calc(50% - 50px);
   height: 100%;
   background: #000;
@@ -210,10 +350,11 @@ section{
   color: #fff;
   font-family: sans-serif;
   line-height: 25px;
-  
+
 }
-.image-box{
-     width: calc(50% + 50px);
+
+.image-box {
+  width: calc(50% + 50px);
   height: 100%;
   background: #f00;
   box-sizing: border-box;
@@ -222,12 +363,10 @@ section{
   background: url(http://www.divscode.com/bootimg/pexel.jpeg);
   background-position: -350px -59px;
   background-repeat: no-repeat;
-  
+
 }
 
 #Home {
-
-  .bg-video {}
 
 }
 
@@ -262,17 +401,32 @@ section{
 }
 
 /* Contact page */
+
+.gm-image {
+  background-image: url("https://assetbm.com.au/img/krishna.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .caption {
+    //background: rgba(0, 0, 0, 0.5);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    top: 100%;
+    transform: translateY(-100%);
+    font-size: 1rem;
+
+    p {
+      margin-bottom: 0px;
+    }
+}
 #Contact {
   .hero {
 
     .quote {}
-
-    .gm-image {
-      background-image: url("https://assetbm.com.au/img/krishna.jpg");
-      height: 100%;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
 
       .caption {
         //background: rgba(0, 0, 0, 0.5);
@@ -297,13 +451,39 @@ section{
   .formarea {}
 }
 
+//Footer
 .footer hr {
   max-width: 100%;
   border-color: $orange;
 }
 
+.footer {
+  background: linear-gradient(174deg, $indigo, $indigo 65%, rgba(255, 255, 255, 1) 66%, rgba(255, 255, 255, 1) 100%);
+  top: -1px;
+  position: relative;
+}
+
+.skew {
+  background: url('./assets/img/hawthorn/1.jpg');
+  background-size: cover;
+  transform: skewY(-4deg);
+  height: 300px;
+  //top: -1px;
+  padding-bottom: 110px;
+}
+
+.deskew {
+  background: white;
+  //transform: skewY(-4deg);
+  height: 100px;
+  bottom: -120px;
+  position: absolute;
+
+}
+
 /* services */
 #services {
+
   .bg-concierge {
     background-image: url("https://www.marketplace.org/wp-content/uploads/2019/01/GettyImages-993234810.jpg");
     background-size: contain;
@@ -312,6 +492,26 @@ section{
     min-height: 400px;
 
   }
+
+  h3.underline
+  {
+    background-size: 1px 1em;
+    box-shadow:
+      inset 0 -0.175em white,
+      inset 0 -0.2em #000;
+    display: inline;
+    padding-top: 0.5rem;
+    
+  }
+}
+
+.icon {
+  img {
+    display: block;
+
+    //width: 40%;
+  }
+
 }
 
 /* about */
