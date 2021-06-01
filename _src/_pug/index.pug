@@ -46,7 +46,7 @@ include partials/nav.pug
                     | By employing modern systems of facilities management and persistent communications with stakeholders and contractors, we’re able to deliver the best outcomes for residences that foster healthy communities.
                 p.to-fade-in.h3  Trusted by others
                 p.to-fade-in
-                    | With over 15 communmities in our growing portfolio and over 5000 lots under our management, our satisfied clients enjoy a trusted partner in their investment in premier lifestyle residences.
+                    | With over 15 communmities in our growing portfolio and over 3500 lots under our management, our satisfied clients enjoy a trusted partner in their investment in premier lifestyle residences.
 .container-fluid.bg-primary.bg-services
     .containers
         .row
@@ -183,16 +183,21 @@ include partials/nav.pug
                             p.card-text 36 La Trobe Street Melbourne CBD. 
                                 small.text-muted.float-right click for details
                 |
-                .row.pt-4
-                    .card.col-12.col-md-6.offset-md-3.p-0(data-toggle='modal' data-target='#ModalThirteen')
+                .card-deck.row.pt-4
+                    .card.col-12.col-md-6.p-0(data-toggle='modal' data-target='#ModalThirteen')
+                        img.card-img-top.img-responsive(src='./assets/img/victoriasquare/1.jpg' alt='Card image cap')
+                        .card-body
+                            h5.card-title Victoria Square
+                            p.card-text 8 Hopkins St Footscray. 
+                            p.card-text
+                                small.text-muted.float-right click for details            
+                    .card.col-12.col-md-6.p-0(data-toggle='modal' data-target='#ModalFourteen')
                         img.card-img-top.img-responsive(src='./assets/img/teri/1.jpg' alt='Card image cap')
                         .card-body
                             h5.card-title Teri Apartments
                             p.card-text 85 Market Street South Melbourne. 
                             p.card-text
                                 small.text-muted.float-right click for details
-                |
-                               
 .container-fluid.bg-primary.border-0
     .container
         .row.pb-5

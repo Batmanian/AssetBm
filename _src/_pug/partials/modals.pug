@@ -470,7 +470,7 @@
     .modal-dialog(role='document')
         .modal-content
             .modal-header
-                h5#ModalOneLabel.modal-title Modal Eleven
+                h5#ModalOneLabel.modal-title 
 
             .modal-body
 
@@ -558,11 +558,59 @@
 
             .modal-body
 
-                #carousel12Indicators.carousel.slide(data-ride='carousel')
+                #carousel13Indicators.carousel.slide(data-ride='carousel')
                     ol.carousel-indicators
-                        li.active(data-target='#carousel12Indicators' data-slide-to='0')
+                        li.active(data-target='#carousel13Indicators' data-slide-to='0')
                         li(data-target='#carousel13Indicators' data-slide-to='1')
                         li(data-target='#carousel13Indicators' data-slide-to='2')
+                    .carousel-inner
+                        .carousel-item.active
+                            img.d-block.w-100(src='./assets/img/victoriasquare/1.jpg' alt='First slide')
+                        .carousel-item
+                            img.d-block.w-100(src='./assets/img/victoriasquare/2.jpg' alt='second slide')
+                        .carousel-item
+                            img.d-block.w-100(src='./assets/img/victoriasquare/3.jpg' alt='thirds slide')
+                        .carousel-item
+                            img.d-block.w-100(src='./assets/img/victoriasquare/4.jpg' alt='fourth slide')
+                        .carousel-item
+                            img.d-block.w-100(src='./assets/img/victoriasquare/5.jpg' alt='fifth slide')        
+                    a.carousel-control-prev(href='#carousel13Indicators' role='button' data-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.sr-only Previous
+                    a.carousel-control-next(href='#carousel13Indicators' role='button' data-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.sr-only Next
+
+                .p-4
+                    h5#ModalOneLabel.modal-title Victoria Square
+                    p.lead 8 Hopkins St, Footscray VIC 3011.
+                    p Facilties Under management 
+                        ul
+                            li 434 Lots under management
+                            li 11 Retail units
+                            li Concierge
+                            li 4 Elevators
+                            li Pool 
+                            li Gym
+                            li BBQ 
+                            li 3 Communal areas
+                            li Running track  
+            .modal-footer
+                button.btn.btn-primary(type='button' data-dismiss='modal') Close   
+// modal 14
+#ModalFourteen.modal.fade(role='dialog' aria-labelledby='ModalFourteenLabel' aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                
+
+            .modal-body
+
+                #carousel14Indicators.carousel.slide(data-ride='carousel')
+                    ol.carousel-indicators
+                        li.active(data-target='#carousel14Indicators' data-slide-to='0')
+                        li(data-target='#carousel14Indicators' data-slide-to='1')
+                        li(data-target='#carousel14Indicators' data-slide-to='2')
                     .carousel-inner
                         .carousel-item.active
                             img.d-block.w-100(src='./assets/img/teri/1.jpg' alt='First slide')
@@ -570,10 +618,10 @@
                             img.d-block.w-100(src='./assets/img/teri/2.jpg' alt='First slide')
                         .carousel-item
                             img.d-block.w-100(src='./assets/img/teri/3.jpg' alt='First slide')
-                    a.carousel-control-prev(href='#carousel13Indicators' role='button' data-slide='prev')
+                    a.carousel-control-prev(href='#carousel14Indicators' role='button' data-slide='prev')
                         span.carousel-control-prev-icon(aria-hidden='true')
                         span.sr-only Previous
-                    a.carousel-control-next(href='#carousel13Indicators' role='button' data-slide='next')
+                    a.carousel-control-next(href='#carousel14Indicators' role='button' data-slide='next')
                         span.carousel-control-next-icon(aria-hidden='true')
                         span.sr-only Next
 
