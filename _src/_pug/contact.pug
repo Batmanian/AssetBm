@@ -1,7 +1,12 @@
 - var pagetitle = "Contact Us";
+- var og_title = "Contact AssetBM";
+- var og_site_name = "AssetBM";
+- var og_url = "https://assetbm.com.au/contact.html";
+- var og_description = "Reach out to learn more";
+- var og_image = "https://assetbm.com.au/img/icons/index.jpg";
 include partials/head.pug
 include partials/nav.pug
-#Contact
+#Contact.bg-light
 .container-fluid.hero.bg-primary
     .row
         .container
@@ -11,8 +16,8 @@ include partials/nav.pug
                     p
                         | if you’re looking to improve your building management delivery with a new partner, we can provide a timely proposal so you’re ready to make an informed choice when your contract is reaching its end.
                     p
-                        | Our General Manager is happy to talk about the comprehensive service delivery model we provide and so you’re ready when you’re looking for your next building management company.
-                .col-6.col-md-4.pr-0
+                        | Our General Manager is available to answer all your questions and is looking forward to the opportunity to list the comprehensive service delivery model we provide.
+                .col-6.col-md-4.pr-0 
                     .gm-image.h-100
                         .caption.text-center.w-100.pt-5.pb-0
                             p.pb-2
@@ -22,30 +27,33 @@ include partials/nav.pug
                                 br
                                 | gm@assetbm.com.au
 
-.container-fluid.hero.bg-light.formarea
+.container-fluid.hero.formarea
     .container
-        .row.equal
-            .col-6.pb-5
-                p.pt-5.pr-5 We have a 48 hour turnaround on all requests, so do reach out.
+        .row.equal.mt-5
+            .col-12.col-md-6
+                ppr-5 We have a 48 hour turnaround on all requests, so do reach out.
                 hr
+                p   Email 
+                    a(href='mailto:gm@assetbm.com.au?subject=Website enquiry') gm@assetbm.com.au 
+                    | or fill in our contact form
+
                 p
-                    | gm@assetbm.com.au
-                p
-            .col-6.pl-5.pt-5.pb-5
+            .col-12.col-md-6.pl-3.pb-5
                 section.formarea
-                    form
+                    form(action='https://submit-form.com/rz7XYraC')
                         .form-group.row
-                            label.col-sm-2.col-form-label.pb-3(for='inputEmail3') Name
+                            input(type='hidden' name='_redirect' value='https://assetbm.com.au/thank-you.html')
+                            label.col-sm-2.col-form-label.pb-3(for='name') Name
                             .col-sm-10
-                                input#inputEmail3.form-control(type='email' placeholder='Email')
-                            label.col-sm-2.col-form-label.pb-3(for='inputEmail3') Email
+                                 input#name.form-control(type='text' name='name' placeholder='Name' required='')
+                            label.col-sm-2.col-form-label.pb-3(for='email') Email
                             .col-sm-10
-                                input#inputEmail4.form-control(type='name' placeholder='Email')
-                            label.col-sm-2.col-form-label.pb-3(for='inputEmail3') Phone
+                                input#email.form-control(type='email' name='email' placeholder='Email' required='')
+                            label.col-sm-2.col-form-label.pb-3(for='message') Message
                             .col-sm-10
-                                input#inputEmail5.form-control(type='phone' placeholder='Email')
-                        .form-group.row
+                                textarea#message.form-control(name='message' placeholder='Message' required='')
                             .col-sm-10
-                                button.btn.btn-outline-primary(type='submit') Submit
+                            button.pull-right.ml-3.mt-3.btn.btn-outline-primary(type='submit') Submit
+                  
 
 include partials/footer.pug    

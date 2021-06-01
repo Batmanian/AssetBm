@@ -1,9 +1,17 @@
+doctype html
 html(lang="en-AU")
 	head
 		meta(charset='utf-8')
 		meta(httpequiv='X-UA-Compatible' content='IE=edge')
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		title #{pagetitle} | AssetBM 
+		meta(property='og:title' content=''+ og_title +'')
+		meta(property='og:site_name' content=''+ og_site_name+ '')
+		meta(property='og:url' content='' + og_url + '')
+		meta(property='og:description' content='' + og_description + '')
+		meta(property='og:type' content='website')
+		meta(property='og:image' content='' + og_image + '')
+		meta(property='og:locale' content='en_AU')
 		link(rel="stylesheet" href="main.css")
 		script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
