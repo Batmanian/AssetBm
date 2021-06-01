@@ -96,7 +96,10 @@ h2, .h2 {
   @include font-size(2rem);
 
 }
-
+.no-border
+{
+  border: none !important;
+}
 img {
   margin-bottom: 15px;
   max-width: 100%;
@@ -369,6 +372,9 @@ video {
 #Home {
 
 }
+.shadow{
+  text-shadow: 0px 0px 11px rgba(0,0,0,0.52);
+}
 
 /* Cards / Portfolio */
 .card-deck {
@@ -422,6 +428,7 @@ video {
     p {
       margin-bottom: 0px;
     }
+    
 }
 #Contact {
   .hero {
@@ -467,7 +474,7 @@ video {
   background: url('./assets/img/hawthorn/1.jpg');
   background-size: cover;
   transform: skewY(-4deg);
-  height: 300px;
+  height: 331px;
   //top: -1px;
   padding-bottom: 110px;
 }
